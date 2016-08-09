@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,200italic,300italic,400italic);
+
+body, form{
+	font-family: 'Titillium Web', sans-serif;
+	background-image: url(http://aimanabdel.com/astronomy/images/background-sky-codepen.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: cover;
+  background-attachment: fixed;
+	color:#333;
+}
+
+h1, h3{
+  color: #D6A7C4;
+  font-weight: 200;
+  font-size:53px;
+  text-shadow: 0px 0px 10px black;
+}
+
+h3{
+  font-size:23px;
+}
+
+p{
+  color: #D6A7C4;
+}
+
+hr{
+  border-top: thin solid #D6A7C5; 
+}
+
+.badge,
+.input-group-addon{
+	font-weight:200;
+  background-color: rgba(24, 74, 123, 0.58);
+  padding: 3px 10px;
+  border-radius: 15px;
+  border: thin solid rgba(49, 81, 113, 0.57);
+  color: #688EB3;
+  font-size: 18px;
+}
+
+.weight__input{
+	text-align:right;
+  font-size: 18px;
+  line-height: 22px;
+  width: 50%;
+  color: #00B9D0;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgba(204, 204, 204, 0.37);
+ 
+  &::-webkit-input-placeholder {
+    color: #5B6E80;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+input[type=text]{
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button,
+  &::-moz-outer-spin-button,
+	&::-moz-inner-spin-button {
+   		-webkit-appearance: none;
+      -moz-appearance: none;
+    	margin: 0;
+	}
+}
+
+.list-group-item{
+  background: rgba(0, 0, 0, 0.7);
+  border-color:rgba(51,122,183, 0.4);
+  color:#5B6E80;
+  padding: 8px 15px;
+  font-size: 1.3em;
+  line-height: 2em;
+  transition: all 0.1s linear;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: 40px center;
+  
+  
+  &:hover{
+    background-image: url(http://spaceaim.com/wp-content/uploads/2015/07/Saturn.png);
+    color: #fff;
+    border-color:rgba(51,122,183, 0.4);
+  }
+  
+  &.section-title{
+    background-color: rgba(10, 14, 19, 1);
+    color: #336088;
+    font-size:2em;
+    
+    & > i{
+      position: absolute;
+      right: 17px;
+      font-size:0.8em;
+    }
+  }
+  
+  .badge{
+    font-size:1.1em;
+    line-height: 1em;
+    font-weight: 300;
+    background-color: rgba(51,96,136,0.7);
+  }
+}
+
+.body-satellite > i{
+  margin-left: 20px;
+  font-size: 0.9em;
+}
