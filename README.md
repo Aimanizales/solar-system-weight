@@ -1,5 +1,23 @@
 # Solar System Weight
 Interactive application to calculate the weight on the surface of some planets of our Solar System.
+###### Last Edited: 2016/10/11
+
+| Current Version |  Changes |
+|---|---|
+| **v0.0.2** | Adding gulp tasks and server |
+| **v0.0.1** | Initial draft |
+
+Front End Architecture
+----------------------
+
+##### CSS
+- Bootstrap (Framework)*
+- SASS (Preprocessor)
+- PostCSS (Postprocessor)
+
+##### JavaScript
+-*Pending...*
+
 
 ##UI Documentation
 http://frontendlabs.io/1669--gulp-js-en-espanol-tutorial-basico-primeros-pasos-y-ejemplos
