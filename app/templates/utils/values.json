@@ -1,0 +1,9 @@
+{
+  "src": {
+    "scripts": ["js/vendor.js", "js/app.js"],
+    "styles": ["css/vendor.css", "css/styles.css"]
+  },
+  "site":{
+    "name": "Solar System Weight"
+  }
+}

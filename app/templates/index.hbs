@@ -1,0 +1,86 @@
+{{> head}}
+<body>
+  <div class="container-fluid calculateWeight">
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+        <h1>How much would I weight on ...</h1>
+
+        <h3>Calculate your weight on the surface of different Solar System bodies (and three different types of stars)</h3>
+
+        <p> <br /> (1g = 9.81m/s<sup>2</sup>, the surface gravitational acceleration on Earth)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+        <div class="form-inline">
+          <div class="form-group weight">
+            <div class="input-group">
+              <input type="text" class="form-control input-lg weight__input" name="weightField" size="5" placeholder="Enter weight" change="computeWeight();">
+              <div class="input-group-addon">Kg</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+        <ul class="list-group">
+          <li class="list-group-item section-title">Inner Planets <i>(Natural Satellites in italic)</i></li>
+          <li class="list-group-item">Mercury<strong class="badge bg-primary weightMercury">0 Kg</strong></li>
+          <li class="list-group-item">Venus<strong class="badge weightVenus">0 Kg</strong></li>
+          <li class="list-group-item">Earth<strong class="badge weightEarth">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Moon</i><strong class="badge weightMoon">0 Kg</strong></li>
+          <li class="list-group-item">Mars<strong class="badge weightMars">0 Kg</strong></li>
+          <!--<li class="list-group-item body-satellite"><i>Phobos</i><strong class="badge weightPhobos">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Deimos</i><strong class="badge weightDeimos">0 Kg</strong></li>-->
+
+          <li class="list-group-item section-title">Outer Planets:</li>
+          <li class="list-group-item">Jupiter<strong class="badge weightJupiter">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Io</i><strong class="badge weightIo">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Europa</i><strong class="badge weightEuropa">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Ganymede</i><strong class="badge weightGanymede">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Callisto</i><strong class="badge weightCallisto">0 Kg</strong></li>
+          <li class="list-group-item">Saturn<strong class="badge weightSaturn">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Titan</i><strong class="badge weightTitan">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Rhea</i><strong class="badge weightRhea">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Iapetus</i><strong class="badge weightIapetus">0 Kg</strong></li>
+          <!--<li class="list-group-item body-satellite"><i>Dione</i><strong class="badge weightDione">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Tethys</i><strong class="badge weightTethys">0 Kg</strong></li>-->
+          <li class="list-group-item body-satellite"><i>Enceladus</i><strong class="badge weightEnceladus">0 Kg</strong></li>
+          <!--<li class="list-group-item body-satellite"><i>Mimas</i><strong class="badge weightMimas">0 Kg</strong></li>-->
+
+
+          <li class="list-group-item">Uranus<strong class="badge weightUranus">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Titania</i><strong class="badge weightTitania">0 Kg</strong></li>
+          <!--<li class="list-group-item body-satellite"><i>Oberon</i><strong class="badge weightOberon">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Ariel</i><strong class="badge weightAriel">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Umbriel</i><strong class="badge weightUmbriel">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Miranda</i><strong class="badge weightMiranda">0 Kg</strong></li>-->
+
+
+          <li class="list-group-item">Neptune<strong class="badge weightNeptune">0 Kg</strong></li>
+          <li class="list-group-item body-satellite"><i>Triton</i><strong class="badge weightTriton">0 Kg</strong></li>
+
+          <li class="list-group-item section-title">Dwarf Planets</li>
+          <li class="list-group-item">Pluto<strong class="badge weightPluto">0 Kg</strong></li>
+          <li class="list-group-item">Ceres<strong class="badge weightCeres">0 Kg</strong></li>
+          <!-- <li class="list-group-item">Makemake<strong class="badge weightMakemake">0 Kg</strong></li>
+          <li class="list-group-item">Eris<strong class="badge weightEris">0 Kg</strong></li> 
+          
+          <li class="list-group-item active">Small Bodies</li>
+          <li class="list-group-item">67P/Churyumov–Gerasimenko<strong class="badge weight67P">0 Kg</strong></li>
+          -->
+          <li class="list-group-item section-title">Types of stars:</li>
+          <li class="list-group-item">Sun<strong class="badge weightSun">0 Kg</strong></li>
+          <li class="list-group-item">White Dwarf<strong class="badge weightWhiteDwarf">0 Kg</strong></li>
+          <li class="list-group-item">Neutron Star<strong class="badge weightNeutronStar">0 Kg</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{#each src.scripts}}
+    <script type="text/javascript" src="{{this}}"></script>
+  {{/each}}
+</body>
+</html>

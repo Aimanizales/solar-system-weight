@@ -1,13 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,200italic,300italic,400italic);
+@import '_fonts', 
+        '_variables';
 
 body, form{
-	font-family: 'Titillium Web', sans-serif;
-	background-image: url(http://aimanabdel.com/astronomy/images/background-sky-codepen.jpg);
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url(http://aimanabdel.com/astronomy/images/background-sky-codepen.jpg);
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: cover;
   background-attachment: fixed;
-	color:#333;
+  color:#333;
 }
 
 h1, h3{
@@ -31,7 +32,7 @@ hr{
 
 .badge,
 .input-group-addon{
-	font-weight:200;
+  font-weight:200;
   background-color: rgba(24, 74, 123, 0.58);
   padding: 3px 10px;
   border-radius: 15px;
@@ -41,7 +42,7 @@ hr{
 }
 
 .weight__input{
-	text-align:right;
+  text-align:right;
   font-size: 18px;
   line-height: 22px;
   width: 50%;
@@ -58,14 +59,14 @@ hr{
 }
 
 input[type=text]{
-	&::-webkit-outer-spin-button,
-	&::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button,
   &::-moz-outer-spin-button,
-	&::-moz-inner-spin-button {
-   		-webkit-appearance: none;
+  &::-moz-inner-spin-button {
+      -webkit-appearance: none;
       -moz-appearance: none;
-    	margin: 0;
-	}
+      margin: 0;
+  }
 }
 
 .list-group-item{
