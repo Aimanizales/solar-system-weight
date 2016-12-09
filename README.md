@@ -44,3 +44,6 @@ http://javascript.info/tutorial/bubbling-and-capturing
 ##Theorical documentation
 This work was inspired by: www.exploratorium.edu/ronh/weight/
 https://en.wikipedia.org/wiki/Surface_gravity
+
+## Others
+http://img-9gag-fun.9cache.com/photo/axg3WnL_700b.jpg
