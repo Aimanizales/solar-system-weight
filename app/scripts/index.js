@@ -1,11 +1,7 @@
-/*
-http://numbrojs.com/
-
-
-*/
-
-var ssBodies = [
-    //https://en.wikipedia.org/wiki/Surface_gravity
+var solarSystemWeight = (function(){
+  console.log(this);
+  
+  var ssBodies = [
     {
       name: 'Sun',
       surface_gravity: 28.02
@@ -128,21 +124,22 @@ var ssBodies = [
   weightField = weightForm.querySelector('input[name=weightField]'),
   weightValue,
   weightInput = document.querySelector('.weight__input');
+  weightInput.addEventListener('keyup', printWeight); //vanilla JS
+  //$(":input").bind('keyup', printWeight);           //jQuery
 
-weightInput.addEventListener('keyup', printWeight); //vanilla JS
-//$(":input").bind('keyup', printWeight);           //jQuery
-
-function printWeight() {
-  var ssElement;
-  weightValue = weightField.value;
-  for (var i = 0; i < ssBodies.length; i++) {
-    ssElement = weightForm.querySelector('.weight' + ssBodies[i].name);
-    if (ssElement) {
-      ssElement.innerHTML = computeWeight(ssBodies[i].surface_gravity);
+  function printWeight() {
+    var ssElement;
+    weightValue = weightField.value;
+    for (var i = 0; i < ssBodies.length; i++) {
+      ssElement = weightForm.querySelector('.weight' + ssBodies[i].name);
+      if (ssElement) {
+        ssElement.innerHTML = computeWeight(ssBodies[i].surface_gravity);
+      }
     }
   }
-}
 
-function computeWeight(n) {
-  return numbro(weightValue * n).format('0,0.00') + ' Kg';
-}
+  function computeWeight(n) {
+    return numbro(weightValue * n).format('0,0.00') + ' Kg';
+  }
+}());
+

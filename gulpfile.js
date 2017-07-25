@@ -49,13 +49,17 @@ gulp.task('base:templates', function () {
 
 // ------------------- Scripts -------------------
 gulp.task('scripts:js', function () {
-  gulp.src(PATHS.js.vendor)
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('./public/js'));
-
   gulp.src(PATHS.js.app)
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./public/js'));
+    .pipe(gulp.dest('./public/js'))
+    .pipe(sync.reload({stream: true}));
+});
+
+gulp.task('scripts:vendor', function () {
+  gulp.src(PATHS.js.vendor)
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('./public/js'))
+    .pipe(sync.reload({stream: true}));
 });
 
 // ------------------- assets -------------------
@@ -87,6 +91,6 @@ gulp.task('default:server', function () {
 
 // basic tasks
 gulp.task('default', ['base', 'default:server', 'default:watch']);
-gulp.task('base', ['base:assets', 'base:styles', 'scripts:js', 'base:templates']);
+gulp.task('base', ['base:assets', 'base:styles', 'scripts:js', 'scripts:vendor', 'base:templates']);
 gulp.task('base:styles', ['styles:vendor', 'styles:sass']);
 
